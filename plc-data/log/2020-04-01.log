@@ -1,0 +1,25 @@
+2020-04-01 11:50:02 INFO: There are no files in data-temp
+2020-04-01 11:50:02 INFO: Files in plc-data: ['20191027.log20191027.log', '20191028.log']
+2020-04-01 11:50:02 INFO: @@@@@@@@@@ Start to do Data Processing: ['20191027.log20191027.log'] @@@@@@@@@@
+2020-04-01 11:50:02 INFO: Reading the file line by line...
+2020-04-01 11:50:03 INFO: Check if dataset 1 exists
+2020-04-01 11:50:03 INFO: Converting lineList to long_df...
+2020-04-01 11:50:03 ERROR: Failed to create columnMeta
+2020-04-01 11:50:03 ERROR: Traceback (most recent call last):
+  File "main.py", line 19, in <module>
+    readPLCDir()
+  File "/Foxconn/Projects/CNCTool/etl-cnc/readAndSplitFiles.py", line 18, in readPLCDir
+    splitFileIntoDatasets(tempDir, [file])
+  File "/Foxconn/Projects/CNCTool/etl-cnc/readAndSplitFiles.py", line 42, in splitFileIntoDatasets
+    dataProcessing(dataSet_list, dataSetNum, dataSetCount)
+  File "/Foxconn/Projects/CNCTool/etl-cnc/dataProcessing.py", line 15, in dataProcessing
+    long_df = pd.DataFrame(lineSplit)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 435, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 404, in to_arrays
+    dtype=dtype)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 434, in _list_to_arrays
+    content = list(lib.to_object_array(data).T)
+KeyboardInterrupt
+
+2020-04-01 11:50:03 ERROR: The program terminated abnormally!!
